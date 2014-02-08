@@ -1,0 +1,10 @@
+body {
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+.greeting{
+	background-color: #005AB4;
+	color: white;
+	padding: 0.5em;
+	font-size: 20pt;
+}
