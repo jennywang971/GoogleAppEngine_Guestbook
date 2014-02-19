@@ -8,3 +8,8 @@ body {
 	padding: 0.5em;
 	font-size: 20pt;
 }
+
+#map-canvas{
+	height:300px; 
+	width:500px"
+}

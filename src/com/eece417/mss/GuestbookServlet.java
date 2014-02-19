@@ -11,18 +11,17 @@ import com.google.appengine.api.users.UserServiceFactory;
 public class GuestbookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
-		
+
 		UserService userService = UserServiceFactory.getUserService();
 		User user = userService.getCurrentUser();
-		
-		if( user != null){
+
+		if (user != null) {
 			resp.setContentType("text/plain");
 			resp.getWriter().println("Hello, " + user.getNickname());
-		}else{
-			//  Sends a temporary redirect response to the client using the 
+		} else {
+			// Sends a temporary redirect response to the client using the
 			// specified redirect location URL and clears the buffer.
 			resp.sendRedirect(userService.createLoginURL(req.getRequestURI()));
 		}
-		
 	}
 }

@@ -37,6 +37,14 @@ public class SignGuestbookServlet extends HttpServlet {
         greeting.setProperty("user", user);
         greeting.setProperty("date", date);
         greeting.setProperty("content", content);
+        
+        // getting Latitude, Longitude, and Accuracy
+        String latitude = req.getParameter("latitude");
+        String longitude = req.getParameter("longitude");
+        String accuracy = req.getParameter("accuracy");
+        greeting.setProperty("latitude", latitude);
+        greeting.setProperty("longitude", longitude);
+        greeting.setProperty("accuracy", accuracy);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         datastore.put(greeting);
