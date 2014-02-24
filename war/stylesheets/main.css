@@ -1,15 +1,51 @@
 body {
-    font-family: Verdana, Helvetica, sans-serif;
+	font-family: Verdana, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+    overflow-x: hidden;
 }
 
-.greeting{
+.greeting {
 	background-color: #005AB4;
 	color: white;
 	padding: 0.5em;
 	font-size: 20pt;
+    top: 0;
+	width: 100%;
+	position: absolute;
+	margin: 0;
+	z-index: 1;
 }
 
-#map-canvas{
-	height:300px; 
-	width:500px"
+div#guestbook_header {
+    margin-top: 50px;
+    height: 20%;
+}
+
+div#guestbook_body {
+	bottom: 0;
+	height: 78%;
+    overflow: auto;
+    margin-bottom: 80px;
+}
+
+div.guestbook {
+	float: left;
+    padding: 0.5em;
+    width: 39%;
+    height: 100%;
+    position: fixed;
+}
+
+div#map-canvas {
+    margin-top: 60px;
+	height: calc(100% - 60px);
+	height: -o-calc(100% - 60px); /* opera */
+    height: -webkit-calc(100% - 60px); /* google, safari */
+    height: -moz-calc(100% - 60px); /* firefox */ 
+	width: 60%;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
 }
